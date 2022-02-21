@@ -1,10 +1,11 @@
 import React from "react";
 import styles from "./Cart.module.css";
+import Modal from "../UI/Modal";
 
 export default function Cart() {
   const cartItems = [{ id: "c1", name: "Sushi", price: 12.99 }];
   return (
-    <div>
+    <Modal>
       <ul className={styles["cart-items"]}>
         {cartItems.map((item) => (
           <li>{item.name}</li>
@@ -19,6 +20,6 @@ export default function Cart() {
         <button className={styles.button}>Order</button>
       </div>
       <div></div>
-    </div>
+    </Modal>
   );
 }
